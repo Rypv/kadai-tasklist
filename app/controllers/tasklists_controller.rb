@@ -39,16 +39,16 @@ class TasklistsController < ApplicationController
    end
 
    def destroy
-     @tasklist = Tasklist.find(params[:id])
-     @tasklist.destroy
+     @task = Task.find(params[:id])
+     @task.destroy
      
-     flash[:success] = "Tasklistは正常にさくじょされました、"
+     flash[:success] = "Tasklistは正常に削除されました、"
    end
 end
 
 private
 
 #Strong Parameter
-def tasklist_params
-  params.require(:tasklist).permit(:content)
+def task_params
+  params.require(:task).permit(:content)
 end 

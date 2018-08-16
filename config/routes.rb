@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  root to: "tasklists#index"
-  resources :tasklists
+  root to: "tasks#index"
+  resources :tasks
   
   #本来のルーティング内容
   #get "tasklists/:id", to: "tasklists#show"
